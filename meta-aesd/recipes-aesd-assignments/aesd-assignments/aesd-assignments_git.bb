@@ -8,7 +8,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mrjaiswa/;p
 
 PV = "1.0+git${SRCPV}"
 # TODO: set to reference a specific commit hash in your assignment repo
-SRCREV = "94b3a078b0a2e07f8e7d1f867f5ee661d8327167"
+SRCREV = "73ef128e1eb4e05b1a2b06f6307f4dfe14c2f9c4"
 
 # This sets your staging directory based on WORKDIR, where WORKDIR is defined at 
 # https://docs.yoctoproject.org/ref-manual/variables.html?highlight=workdir#term-WORKDIR
@@ -40,10 +40,10 @@ do_install () {
 	install -d ${D}${bindir}
         install -m 0755 ${S}/aesdsocket ${D}${bindir}/
 	install -d ${D}${sysconfdir}/init.d/
-        install -d ${D}/etc/rc5.d/
+        #install -d ${D}/etc/rc5.d/
 	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/init.d/
-       	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}/etc/init.d/S99aesdsocket	
-	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}/etc/rc5.d/S99aesdsocket	
+       	#install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}/etc/init.d/S99aesdsocket	
+	#install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}/etc/rc5.d/S99aesdsocket	
 	# Be sure to install the target directory with install -d first
 	# Yocto variables ${D} and ${S} are useful here, which you can read about at 
 	# https://docs.yoctoproject.org/ref-manual/variables.html?highlight=workdir#term-D

@@ -12,6 +12,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 # LIC_FILES_CHKSUM = "file://../LICENSE;md5=f098732a73b5f6f3430472f5b094ffdb"
 
+# We cannot have : change that to /
 # Has to be github.com/ and not github.com:
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mrjaiswa.git;protocol=ssh;branch=master \
 			file://aesd-char-driver_init \
